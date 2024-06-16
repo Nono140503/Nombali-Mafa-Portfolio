@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nombali Mafa- Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="Nombali.png">
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        // Initialize EmailJS
+        document.addEventListener('DOMContentLoaded', function () {
+            emailjs.init({
+                publicKey: 'VPVizav-E4T0KIBh2' // Replace 'YOUR_PUBLIC_KEY' with the actual public key from EmailJS
+            });
+        });
+    </script>
+    <script src="https://kit.fontawesome.com/09375acdcf.js" crossorigin="anonymous"></script>
+    </head>
+<body>
+    <!-- <marquee bgcolor = "purple" direction="right" scrollamount="20">
+        <h1>Hello there</h1>
+    </marquee> -->
+    <nav>
+        <a class="nav" onclick="redirectToAbout()">About Me</a>
+        <a onclick="redirectToProjects()" class="nav">Projects</a>
+        
+        <a onclick="redirectToContact()" class="nav">Contact</a>
+        <a href="Nombali Mafa Resume.pdf" download="Nombali Mafa Resume.pdf" class="nav" >Download CV</a>
+    </nav>
+    <!-- <br><br><br><br> -->
+    
+    <section class="row-1" id="about_me">
+        <section class="blob-1">
+
+            <section class="greet">
+                <span class="hi">Hi there!</span>
+                <br>
+                <span class="name">My name is Nombali</span>
+                <br>
+                <span>I am an aspiring Software Developer</span>
+            </section>
+            
+        </section>
+        <section class="image-cont">
+            <section>
+                <!-- <i class="fa-solid fa-code" style="color: #ededed; font-size: 270px;"></i>
+                <img src="IMG_9478-removebg-preview.png" width="300" height="300" class="me"> -->
+            </section>
+        </section>
+    </section>
+    <section class="projects" id="projects">
+        <h1>Projects</h1>
+        <h1 class="heading">WhatsApp Chatbots</h1>
+        <section class="cards">
+            <section class="card-1" id="card"  data-video="CrediBot.mp4">
+                <p class="text">Credibot is your personal finance WhatsApp chatbot. 
+                    He's your go-to guy for navigating loans and understanding financial policies. 
+                    With Credibot, you're in safe hands as he guides you through secure chats, helping you make informed decisions and boosting your financial literacy along the way.</p>
+                    <div class="tooltip">Click the card to see a video</div>
+            </section>
+            
+            <section class="card-2" id="card"  data-video="AllyBot.mp4" >
+                <p class="text">Meet AllyBot, your WhatsApp chatbot ally in the IT workspace. 
+                    She's here to empower women, offering insights on workplace rights, suggesting supportive companies, 
+                    and sharing FAQs from other women. With AllyBot by your side, navigate your career confidently.</p>
+                    <div class="tooltip">Click the card to see a video</div>
+            </section>
+            <section class="card-3" id="card"  data-video="ReproBot.mp4">
+                <p class="text">Meet ReproBot, your WhatsApp ally for Sexual Reproductive Health and Rights. 
+                    She's here to educate and empower women and young women. 
+                    Get accurate information, support, and guidance—all in a safe chat environment.</p>
+                    <div class="tooltip">Click the card to see a video</div>
+            </section>
+        </section>
+        <section class="names">
+            <section>
+                <h1 class="credi">CrediBot</h1>
+            </section>
+            <section>
+                <h1 class="ally">AllyBot</h1>
+            </section>
+            <section>
+                <h1 class="repro">ReproBot</h1>
+            </section>
+            
+            
+         
+        </section>
+        <section class="languages">
+            <h2>Programming language</h>
+             <section class="logo">
+                <img src="nodeJs.png" width="150" height="150">
+             </section>
+            <ul>
+                <li>NodeJS</li>
+            </ul>
+        </section>
+        <h1 class="heading">Web Development Projects</h1>
+        <section class="webdev">
+            <section class="images-container">
+                <section class="images">
+                    <section class="html">
+                        <img src="HTML.png" width="200" height="200">
+                    </section>
+                    <section class="css">
+                        <img src="CSS.webp" width="200" height="200">
+                    </section>
+                    <section class="js">
+                        <img src="JS.png" width="200" height="200">
+                    </section>
+                </section>
+                <section id="tag" class="text-overlay">
+                    &lt;/&gt;
+                </section>
+            </section>
+          
+
+        </section>
+    </section>
+    <div id="video-modal" class="video-modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <video controls></video>
+        </div>
+    </div>
+    <footer>
+        <section class="socials">
+            
+                <h1 class="socials_head">Social Media</h1>
+            
+            <section class="social_links">
+                <a href="https://github.com/Nono140503" target="_blank"><i class="fa-brands fa-github"></i> Github</a>
+                <a href=""><i class="fa-brands fa-instagram" target="_blank"></i>Instagram</a>
+                <a href="https://linkedin.com/in/nombali-mafa-94813b283" target="_blank"><i class="fa-brands fa-linkedin"></i>LinkedIn</a>
+            </section>
+           
+        </section>
+        <h1 class="get_in_touch">Get in Touch</h1>
+        <section class="contact" id="contact">
+            <h1>Send a message</h1>
+            <section>
+                <form id="contact_form">
+                    <input type="text" placeholder="Name" autocomplete="name" required>
+                    <input type="text" placeholder="Surname" class="surname" autocomplete="family-name">
+                    <textarea rows="5" cols="57" placeholder="Enter your text"></textarea>
+                    <button type="submit"  class="send">Send!!!</button>
+                </form>
+                
+            </section>
+            
+        </section>
+    </footer>
+  
+    <script src="index.js"></script>
+    <script >
+        document.getElementById('contact_form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // Send the form using EmailJS
+            emailjs.sendForm('service_c1z8o0x', 'template_9jxhoc1', this)
+                .then(function(response) {
+                    alert('Message sent successfully!');
+                }, function(error) {
+                    alert('Failed to send message: ' + JSON.stringify(error));
+                });
+        });
+    </script>
+</body>
+</html>
