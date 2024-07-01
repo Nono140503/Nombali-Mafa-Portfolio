@@ -12,7 +12,7 @@ function redirectToAbout() {
     about_me.scrollIntoView({ behavior: 'smooth' });
 }
 let redirect = document.getElementById('weatherApp').addEventListener('click', function(){
-    window.location.href = 'https://nono140503.github.io/WeatherApp/';
+    window.open('https://nono140503.github.io/WeatherApp/', '_blank');
 });
 document.addEventListener("DOMContentLoaded", function() {
   const cards = document.querySelectorAll(" #card");
