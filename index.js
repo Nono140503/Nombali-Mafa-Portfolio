@@ -11,8 +11,11 @@ function redirectToAbout() {
   let about_me = document.getElementById('about_me');
     about_me.scrollIntoView({ behavior: 'smooth' });
 }
+let redirect = document.getElementById('weatherApp').addEventListener('click', function(){
+    window.location.href = 'https://nono140503.github.io/WeatherApp/';
+});
 document.addEventListener("DOMContentLoaded", function() {
-  const cards = document.querySelectorAll(".cards #card");
+  const cards = document.querySelectorAll(" #card");
   const modal = document.getElementById("video-modal");
   const videoElement = modal.querySelector("video");
   const closeModal = modal.querySelector(".close");
