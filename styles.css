@@ -1,15 +1,45 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
-body {
-	font-family: "Roboto Condensed", sans-serif;
-	background-color: rgb(34, 33, 33);
-	padding: 0;
-	margin: 0;
-	color: white;
+@import url('https://fonts.googleapis.com/css2?family=Cascadia+Code:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+:root {
+    --background-color: rgb(206, 173, 238);
+    --text-color: slateblue;
+    --link-hover-color: darkmagenta;
+    --card-hover-bg: rgba(0, 0, 0, 0.1);
+    --form-border: #0066cc;
+    --button-bg: linear-gradient(to bottom right, rgb(47, 0, 255), rgb(80, 0, 184), slateblue);
+    --modal-bg: rgba(255, 255, 255, 0.8);
+    --modal-content-bg: #ffffff;
+	--project-cont-bg: rgb(205, 205, 241);
+	--a-color: slateblue;
 }
 
+/* Dark Theme Variables */
+body.dark-theme {
+    --background-color: #222121;
+    --text-color: #ffffff;
+    --link-hover-color: slateblue;
+    --card-hover-bg: rgba(255, 255, 255, 0.1);
+    --form-border: slateblue;
+    --button-bg: linear-gradient(to bottom right, rgb(47, 0, 255), rgb(80, 0, 184), slateblue);
+    --modal-bg: rgba(0, 0, 0, 0.8);
+    --modal-content-bg: grey;
+	--project-cont-bg: rgb(54, 54, 54);
+	--a-color: white;
+}
+
+/* Global Styles */
+body {
+    font-family: "Merriweather Sans", sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    padding: 0;
+	/* color: darkmagenta; */
+    margin: 0;
+}
 .blob-1 {
-	width: 40%;
-	height: 30em;
+	width: 45% !important;
+	height: 32em;
 	background: linear-gradient(
 		to bottom right,
 		rgb(47, 0, 255),
@@ -19,18 +49,46 @@ body {
 	border-radius: 70% 30% 60% 30% / 40% 60% 30% 60%;
 	position: relative;
 	box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
-	margin-top: 40px;
-	margin-left: 20px;
+	margin-top: 10px;
+	margin-right: 20px;
 	color: white;
 	display: flex;
 	justify-content: center;
+	z-index: 0;
+	
 }
 .greet {
-	margin-top: 80px;
+    /* font-size: xx-large; */
+	margin-top: 150px;
+	margin-left: 30px;
+	font-family: 'Cascadia Code', monospace;
+	width: 55%;
+	font-weight: lighter;
 }
+
+.typed-text {
+    display: inline-block;
+}
+
+.cursor {
+    display: inline-block;
+    width: 15px; /* Adjust width of the cursor */
+    height: 3px; 
+    background-color: var(--text-color); /* Color of the cursor */
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    0%, 50% { color: transparent; }
+    51%, 100% { color: white; }
+}
+/* Optional: Basic styling for the greet section */
+
+/* Typing animation */
+
 nav {
-	padding: 20px;
-	box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+	padding: 14px;
+	box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.212);
 	display: flex;
 	justify-content: right;
 	position: fixed;
@@ -41,37 +99,66 @@ nav {
 }
 li {
 	font-weight: normal;
-	font-size: large;
+	font-size: large !important;
 }
 a {
 	padding: 15px;
-	font-size: 21px;
+	font-size: 18px;
 	text-decoration: none;
 	position: relative;
-	color: white;
+	color: var(--a-color);
+	/* text-shadow:  1px 1px rgba(0,0,0,0.5) */
 }
 .cards {
 	opacity: 0;
-	transition: opacity 1s; /* Adjust the duration as needed */
+	transition: opacity 2s; /* Adjust the duration as needed */
 }
 
 .cards.fade-in {
 	opacity: 1;
 }
+.languages {
+	opacity: 0;
+	transition: opacity 2s; /* Adjust the duration as needed */
+}
+.card-4, .card-5{
+	opacity: 0;
+	transition: opacity 3s;
+}
+.card-4.fade-in, .card-5.fade-in{
+	opacity: 1;
+}
+.languages.fade-in {
+	opacity: 1;
+}
+.webdev {
+	opacity: 0;
+	transition: opacity 1s ; /* Adjust the duration as needed */
+}
+
+.webdev.fade-in {
+	opacity: 1;
+}
+.heading.fade-in {
+	opacity: 1;
+}
 .heading {
 	text-align: left;
 	margin-left: 20px !important;
-	font-size: 27px;
+	font-size: 23px;
+	opacity: 0;
+	transition: opacity 2s;
 }
 h2 {
 	margin-left: 20px;
+	font-size: 23px;
 }
 span {
 	font-size: 30px;
 }
 a:hover {
 	cursor: pointer;
-	color: slateblue;
+	color: var(--link-hover-color);
 }
 .nav::before {
 	content: "";
@@ -80,8 +167,9 @@ a:hover {
 	height: 2px;
 	bottom: 5px;
 	left: 50%;
-	background-color: slateblue;
+	background-color: var(--link-hover-color);
 	transition: width 0.3s ease, left 0.3s ease;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.74);
 }
 
 .nav:hover::before {
@@ -95,7 +183,11 @@ a:hover {
 	margin-top: 100px;
 }
 .image-cont {
-	margin-right: 90px;
+	/* margin-right: 90px; */
+	z-index: 1;
+	right: -32%;
+	margin-top: 90px;
+	position: relative;
 }
 .hi {
 	margin-left: 50px !important;
@@ -109,12 +201,25 @@ a:hover {
 		opacity: 1;
 	}
 }
+.role{
+	font-size: larger;
+	color: slateblue;
+	font-weight: bold;
+	margin-left: 50px;
 
+}
 .hi {
-	animation: fadeIn 2s ease-in-out;
+	font-family: "Merriweather Sans", sans-serif;
+	font-size: 60px;
+	
+}
+.content_1{
+	margin-left: 50px;
 }
 .name {
-	animation: fadeIn 5s ease-in-out;
+	
+
+	font-size: medium !important;
 }
 .contact {
 	border: linear-gradient(rgb(47, 0, 255), rgb(80, 0, 184), slateblue) 1;
@@ -181,7 +286,7 @@ textarea {
 }
 
 h1 {
-	font-size: xx-large;
+	font-size: x-large;
 	text-align: center;
 }
 .send:hover {
@@ -196,10 +301,17 @@ h1 {
 }
 .credi {
 	text-align: center;
+	font-size: x-large !important;
+}
+.ally{
+	font-size: x-large !important;
+}
+.repro{
+	font-size: x-large !important;
 }
 .projects {
 	margin-top: 40px;
-	background: rgb(73, 73, 73);
+	background: var(--project-cont-bg);
 	height: 165em;
 
 	padding: 10px;
@@ -273,7 +385,7 @@ h1 {
 	left: 50%;
 	transform: translate(-50%, -50%);
 	color: white;
-	font-size: 18px;
+	font-size: 15px;
 	opacity: 0;
 	transition: opacity 0.3s ease-in-out;
 	width: 90%;
@@ -381,8 +493,8 @@ h1 {
   justify-content: space-around;
 }
 .weather-app {
-	margin-right: 27em !important;
-  font-size: 25px;
+	margin-right: 30em !important;
+  font-size: 22px;
 }
  .css{
  margin-left: 140px;
@@ -391,22 +503,41 @@ h1 {
   margin-left: 130px;
 }
  .axios{
-  margin-left: 140px;
+  margin-left: 80px;
 }
  .github-pages{
   margin-left: 70px;
 }
+.javaScript{
+	margin-left: 60px;
+}
+.node_js{
+	margin-left: 80px;
+}
+.opencage{
+	margin-left: 110px;
+}
+.expo{
+	margin-left: 70px;
+}
+.logo_image{
+	display: flex;
+	justify-content: space-around;
+}
  .javascript{
-  margin-left: 170px;
+  margin-left: 130px;
 }
 .openweather{
-  margin-left: 130px;
+  margin-left: 100px;
 }
 .react-app li{
   font-size: larger;
 }
 #weatherApp:hover{
   cursor: pointer;
+}
+.nodejs{
+	margin-left: 70px;
 }
 .fa-brands {
 	font-size: 35px;
@@ -438,6 +569,7 @@ a i {
 	top: 2%; /* Position below the card */
 	left: 50%;
 	transform: translateX(-50%);
+	font-size: medium;
 }
 
 .cards #card:hover .tooltip,
@@ -449,6 +581,9 @@ a i {
 .logo-react:hover{
   cursor: pointer;
 }
+.logo-react-native:hover{
+	cursor: pointer;
+  }
 
 /* Video Modal */
 .video-modal {
@@ -459,7 +594,6 @@ a i {
 	top: 0;
 	width: 100%;
 	height: 100%;
-	overflow: auto;
 	background-color: rgba(0, 0, 0, 0.8);
 	justify-content: center;
 	align-items: center;
@@ -546,13 +680,16 @@ a i {
 	text-align: center;
 	z-index: 2; /* Ensure the text is above the overlay */
 }
+
+  
+
 .socials_head {
 	margin-top: 10px !important;
 	margin-left: 50px;
-	font-size: 26px;
+	font-size: 24px;
 }
 .get_in_touch {
-	font-size: 26px;
+	font-size: 24px;
 	position: absolute;
 	left: 75%;
 }
@@ -574,7 +711,48 @@ a i {
 		opacity: 1; /* End with opacity 1 */
 	}
 }
-
+.checkbox {
+	opacity: 0;
+	position: absolute;
+  }
+  
+  .checkbox-label {
+	background-color: #111 !important;
+	width: 48px;
+	height: 24px;
+	border-radius: 50px;
+	position: relative;
+	padding: 5px;
+	cursor: pointer;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	top: 15%;
+  }
+  
+  .fa-moon {color: #f1c40f;}
+  
+  .fa-sun {color: #f3dd12;}
+  
+  .checkbox-label .ball {
+	background-color: #fff;
+	width: 22px;
+	height: 22px;
+	position: absolute;
+	left: 4px;
+	top: 5px;
+	border-radius: 50%;
+	transition: transform 0.2s linear;
+  }
+  
+  .checkbox:checked + .checkbox-label .ball {
+	transform: translateX(29px);
+  }
+  .checkbox:checked + .checkbox-label{
+	
+	
+	background-color: rgb(129, 167, 216) !important;
+  }
 .fade-out {
 	animation: fadeOut 1s forwards; /* Apply fadeOut animation to fade out &lt;/&gt; */
 }
@@ -589,7 +767,7 @@ a i {
 }
 footer {
 	padding: 20px;
-	background-color: rgb(34, 33, 33);
+	background-color: var(--background-color);
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
@@ -599,26 +777,4 @@ footer {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-}
-/* For WebKit-based browsers (e.g., Chrome, Safari) */
-::-webkit-scrollbar {
-	width: 12px; /* width of the scrollbar */
-}
-
-::-webkit-scrollbar-track {
-	background-color: #888; /* color of the track */
-}
-
-::-webkit-scrollbar-thumb {
-	background-color: rgb(34, 33, 33); /* color of the scrollbar thumb */
-	border-radius: 6px; /* roundness of the scrollbar thumb */
-}
-
-/* For Firefox */
-/* Note: Firefox currently only supports the color property for scrollbar styling */
-/* So, you can't change the background-color or other properties */
-/* But you can change the color of the scrollbar thumb */
-* {
-	scrollbar-color: #888 rgb(87, 81, 81); /* thumb color and track color */
-	scrollbar-width: auto; /* width of the scrollbar */
 }
