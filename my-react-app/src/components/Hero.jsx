@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react'
-import nombaliImage from '../assets/Nombali (2).png'
 import './Hero.css'
 
 const Hero = () => {
@@ -62,7 +61,7 @@ const Hero = () => {
           <div className="hero-image animate-fadeInRight">
             <div className="image-container">
               <img 
-                src={nombaliImage} 
+                src="/Nombali (2).png" 
                 alt="Nombali Mafa" 
                 className="profile-image animate-float"
               />
