@@ -41,7 +41,7 @@ const Navbar = () => {
               Contact
             </a>
             <a 
-              href="/resume.pdf" 
+              href="/Nombali_Mafa_Resume.pdf" 
               download="Nombali_Mafa_Resume.pdf" 
               className="btn btn-primary nav-btn"
             >
