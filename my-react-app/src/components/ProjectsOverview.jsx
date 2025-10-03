@@ -32,7 +32,7 @@ const ProjectsOverview = () => {
       id: 1,
       title: 'WhatsApp Chatbots',
       description: 'AI-powered chatbots for finance, women empowerment, and health education. Built with Node.js to provide secure, informative conversations.',
-      icon: '/bot.jpg',
+      icon: '/assets/bot.jpg',
       count: '3 Projects',
       technologies: ['Node.js', 'WhatsApp Web JS', 'OpenAI API']
     },
@@ -40,7 +40,7 @@ const ProjectsOverview = () => {
       id: 2,
       title: 'Websites',
       description: 'Modern, responsive web applications featuring interactive user experiences and clean designs built with the latest web technologies.',
-      icon: '/web-design.png',
+      icon: '/assets/web-design.png',
       count: 'Coming Soon',
       technologies: ['React', 'HTML5', 'CSS3', 'JavaScript']
     },
@@ -48,7 +48,7 @@ const ProjectsOverview = () => {
       id: 3,
       title: 'Mobile Apps',
       description: 'Cross-platform mobile applications focused on safety and empowerment, including SafeHer - a comprehensive safety app for women.',
-      icon: '/benefits-of-mobile-app-for-business.webp',
+      icon: '/assets/benefits-of-mobile-app-for-business.webp',
       count: '1 Project',
       technologies: ['React Native', 'Firebase', 'JavaScript']
     },
@@ -56,7 +56,7 @@ const ProjectsOverview = () => {
       id: 4,
       title: 'Machine Learning',
       description: 'Data science and machine learning projects using Python, TensorFlow, and scikit-learn. Exploring predictive models and data analysis.',
-      icon: '/ML.jpg',
+      icon: '/assets/ML.jpg',
       count: 'Coming Soon',
       technologies: ['Python', 'TensorFlow', 'Scikit-learn', 'Pandas', 'Matplotlib']
     }

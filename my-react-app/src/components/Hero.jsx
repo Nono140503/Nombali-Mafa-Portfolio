@@ -61,7 +61,7 @@ const Hero = () => {
           <div className="hero-image animate-fadeInRight">
             <div className="image-container">
               <img 
-                src="/Nombali (2).png" 
+                src="/assets/Nombali (2).png" 
                 alt="Nombali Mafa" 
                 className="profile-image animate-float"
               />

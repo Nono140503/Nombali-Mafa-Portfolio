@@ -36,6 +36,8 @@ body {
   padding: 0 !important;
   width: 100%;
   overflow-x: hidden;
+  display: block;
+  min-height: 100vh;
 }
 
 .App {
