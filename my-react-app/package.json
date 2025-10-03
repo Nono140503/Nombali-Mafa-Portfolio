@@ -1,7 +1,7 @@
 {
   "name": "my-react-app",
   "private": true,
-  "homepage": "https://Nono140503.github.io/Nombali-Mafa-Portfolio",
+  "homepage": "https://nono140503.github.io/Nombali-Mafa-Portfolio/",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
@@ -10,7 +10,8 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
+
 
   },
   "dependencies": {
