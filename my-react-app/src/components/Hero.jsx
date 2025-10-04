@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import './Hero.css'
 
+
 const Hero = () => {
   const handleSmoothScroll = (e, targetId) => {
     e.preventDefault()
@@ -61,7 +62,7 @@ const Hero = () => {
           <div className="hero-image animate-fadeInRight">
             <div className="image-container">
               <img 
-                src="/assets/Nombali (2).png" 
+                src="../../public/assets/Nombali.png"
                 alt="Nombali Mafa" 
                 className="profile-image animate-float"
               />
