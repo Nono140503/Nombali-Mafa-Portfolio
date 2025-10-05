@@ -12,24 +12,24 @@ const Projects = () => {
         id: 1,
         title: 'CrediBot',
         description: 'Credibot is your personal finance WhatsApp chatbot. He\'s your go-to guy for navigating loans and understanding financial policies.',
-        image: '/assets/whatsapp-chatbot.webp',
-        video: '/assets/CrediBot.mp4',
+        image: '/Nombali-Mafa-Portfolio/assets/whatsapp-chatbot.webp',
+        video: '/Nombali-Mafa-Portfolio/assets/CrediBot.mp4',
         technologies: ['Node.js', 'WhatsApp Web JS', 'OpenAI API']
       },
       {
         id: 2,
         title: 'AllyBot',
         description: 'Meet AllyBot, your WhatsApp chatbot ally in the IT workspace. She\'s here to empower women in tech.',
-        image: '/assets/shutterstock_1180950625.jpg',
-        video: '/assets/AllyBot.mp4',
+        image: '/Nombali-Mafa-Portfolio/assets/shutterstock_1180950625.jpg',
+        video: '/Nombali-Mafa-Portfolio/assets/AllyBot.mp4',
         technologies: ['Node.js', 'WhatsApp Web JS', 'OpenAI API']
       },
       {
         id: 3,
         title: 'ReproBot',
         description: 'Meet ReproBot, your WhatsApp ally for Sexual Reproductive Health and Rights education.',
-        image: '/assets/chatbot-app.jpg',
-        video: '/assets/ReproBot.mp4',
+        image: '/Nombali-Mafa-Portfolio/assets/chatbot-app.jpg',
+        video: '/Nombali-Mafa-Portfolio/assets/ReproBot.mp4',
         technologies: ['Node.js', 'WhatsApp Web JS', 'OpenAI API']
       }
     ],
@@ -38,7 +38,7 @@ const Projects = () => {
         id: 4,
         title: 'Weather App',
         description: 'React-based application providing real-time weather information with a clean interface.',
-        image: '/assets/Colorful_3d_Weather_Forecast.png',
+        image: '/Nombali-Mafa-Portfolio/assets/Colorful_3d_Weather_Forecast.png',
         link: 'https://nono140503.github.io/WeatherApp/',
         technologies: ['React', 'JavaScript', 'OpenWeather API', 'CSS3']
       }
@@ -48,8 +48,8 @@ const Projects = () => {
         id: 5,
         title: 'SafeHer',
         description: 'Cutting-edge mobile application designed to enhance women\'s safety through advanced technology.',
-        image: '/assets/SafeHer-Logo.jpg',
-        video: '/assets/SafeHer.mp4',
+        image: '/Nombali-Mafa-Portfolio/assets/SafeHer-Logo.jpg',
+        video: '/Nombali-Mafa-Portfolio/assets/SafeHer.mp4',
         technologies: ['React Native', 'Firebase', 'Geolocation']
       }
     ],
@@ -58,7 +58,7 @@ const Projects = () => {
         id: 6,
         title: 'Maternal Health Risk Machine Learning Model',
         description: 'Built a Random Forest model that predicts maternal health risk levels with 81% accuracy using clinical data.',
-        image: '/assets/Maternity.png',
+        image: '/Nombali-Mafa-Portfolio/assets/Maternity.png',
         link: 'https://colab.research.google.com/drive/1J6eP8YmSDnQNefUJ-s0rb3i34ARnMBgU?usp=sharing',
         technologies: ['Python', 'Pandas', 'Seaborn', 'Matplotlib', 'Scikit-learn']
       }

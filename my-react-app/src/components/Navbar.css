@@ -73,6 +73,16 @@
   width: 100%;
 }
 
+/* Active nav link styling */
+.nav-link.active {
+  color: slateblue;
+}
+
+.nav-link.active::after {
+  width: 100%;
+  background: slateblue;
+}
+
 .nav-btn {
   margin-left: 1rem;
 }

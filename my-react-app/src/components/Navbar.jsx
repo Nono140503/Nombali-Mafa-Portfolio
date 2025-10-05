@@ -1,10 +1,9 @@
 import { useState, useEffect } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import './Navbar.css'
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false)
-  const location = useLocation()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -31,13 +30,17 @@ const Navbar = () => {
           </div>
           
           <div className="nav-links">
-            <Link to="/" className="nav-link">
+            <NavLink to="/" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`} end>
               Home
-            </Link>
-            <Link to="/projects" className="nav-link">
+            </NavLink>
+            <NavLink to="/projects" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>
               Projects
-            </Link>
-            <a href="#contact" onClick={() => scrollToSection('contact')} className="nav-link">
+            </NavLink>
+            <a
+              href="#contact"
+              onClick={() => scrollToSection('contact')}
+              className={`nav-link`}
+            >
               Contact
             </a>
             <a 
