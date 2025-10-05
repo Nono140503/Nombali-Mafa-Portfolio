@@ -1,9 +1,12 @@
 import { useState, useEffect } from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useLocation } from 'react-router-dom'
 import './Navbar.css'
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false)
+  const location = useLocation()
+  // build resume path using Vite base so it works when app is hosted on a subpath
+  const resumePath = `${import.meta.env.BASE_URL}Nombali_mafa_Resume.pdf`
 
   useEffect(() => {
     const handleScroll = () => {
@@ -39,13 +42,13 @@ const Navbar = () => {
             <a
               href="#contact"
               onClick={() => scrollToSection('contact')}
-              className={`nav-link`}
+              className={`nav-link ${location.hash === '#contact' ? 'active' : ''}`}
             >
               Contact
             </a>
-            <a 
-              href="/Nombali_Mafa_Resume.pdf" 
-              download="Nombali_Mafa_Resume.pdf" 
+            <a
+              href={resumePath}
+              download="Nombali_mafa_Resume.pdf"
               className="btn btn-primary nav-btn"
             >
               Download CV
