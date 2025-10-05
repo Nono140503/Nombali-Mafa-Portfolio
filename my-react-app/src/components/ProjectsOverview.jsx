@@ -41,7 +41,7 @@ const ProjectsOverview = () => {
       title: 'Websites',
       description: 'Modern, responsive web applications featuring interactive user experiences and clean designs built with the latest web technologies.',
       icon: '/Nombali-Mafa-Portfolio/assets/web-design.png',
-      count: 'Coming Soon',
+      count: '1 Project',
       technologies: ['React', 'HTML5', 'CSS3', 'JavaScript']
     },
     {
@@ -57,7 +57,7 @@ const ProjectsOverview = () => {
       title: 'Machine Learning',
       description: 'Data science and machine learning projects using Python, TensorFlow, and scikit-learn. Exploring predictive models and data analysis.',
       icon: '/Nombali-Mafa-Portfolio/assets/ML.jpg',
-      count: 'Coming Soon',
+      count: '1 Project',
       technologies: ['Python', 'TensorFlow', 'Scikit-learn', 'Pandas', 'Matplotlib']
     }
   ]

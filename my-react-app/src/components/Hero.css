@@ -75,6 +75,7 @@
   min-height: 80vh;
   padding: 0 80px;
   width: 100%;
+  gap: 2rem;
 }
 
 .hero-text {
@@ -173,53 +174,61 @@
 /* Responsive Design */
 @media (max-width: 1024px) {
   .hero-content {
-    gap: 2rem;
+    gap: 1.5rem;
+    padding: 0 40px;
   }
-  
+
   .hero-title {
-    font-size: 3rem;
+    font-size: 2.2rem;
   }
-  
+
   .image-container {
-    width: 350px;
-    height: 350px;
+    width: 260px;
+    height: 260px;
   }
 }
 
 @media (max-width: 768px) {
   .hero {
-    padding-top: 80px;
+    padding-top: 72px;
     min-height: 60vh;
   }
-  
+
+  /* Stack content vertically and center on small devices */
+  /* Stack on small screens with the image above the text for better visual priority */
   .hero-content {
-    grid-template-columns: 1fr;
-    gap: 2rem;
+    flex-direction: column-reverse;
+    align-items: center;
     text-align: center;
+    padding: 20px;
+    gap: 1.5rem;
   }
-  
+
   .hero-title {
-    font-size: 2rem;
+    font-size: 1.85rem;
   }
-  
+
   .hero-subtitle {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
-  
+
   .hero-description {
     font-size: 0.95rem;
-    
+    height: auto;
+    margin: 0 auto;
+    max-width: 360px;
   }
-  
+
   .image-container {
-    width: 220px;
-    height: 220px;
+    width: 180px;
+    height: 180px;
+    margin: 0 auto;
   }
-  
+
   .hero-buttons {
     justify-content: center;
   }
-  
+
   .shape-1, .shape-2, .shape-3 {
     display: none;
   }
