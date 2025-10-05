@@ -5,6 +5,7 @@ import ProjectsOverview from './components/ProjectsOverview'
 import Footer from './components/Footer'
 import Projects from './pages/Projects'
 import ScrollToTop from './components/ScrollToTop'
+import MobileWarning from './components/MobileWarning'
 import './App.css'
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
     // (for example: https://username.github.io/Nombali-Mafa-Portfolio/)
     <Router basename={import.meta.env.BASE_URL}>
       <div className="App">
+        <MobileWarning />
         <ScrollToTop />
         <Navbar />
         <Routes>
