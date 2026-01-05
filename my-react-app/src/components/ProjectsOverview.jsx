@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import { getProjectCount } from '../utils/projectData'
 import './ProjectsOverview.css'
 
 const ProjectsOverview = () => {
@@ -32,32 +33,33 @@ const ProjectsOverview = () => {
       id: 1,
       title: 'WhatsApp Chatbots',
       description: 'AI-powered chatbots for finance, women empowerment, and health education. Built with Node.js to provide secure, informative conversations.',
-      icon: '/Nombali-Mafa-Portfolio/assets/bot.jpg',
-      count: '3 Projects',
-      technologies: ['Node.js', 'WhatsApp Web JS', 'OpenAI API']
+      icon: './assets/bot.jpg',
+      count: `${getProjectCount('chatbots')} Projects`,
+      technologies: ['Node.js', 'WhatsApp Web JS', 'OpenAI API'],
+      
     },
     {
       id: 2,
       title: 'Websites',
       description: 'Modern, responsive web applications featuring interactive user experiences and clean designs built with the latest web technologies.',
-      icon: '/Nombali-Mafa-Portfolio/assets/web-design.png',
-      count: '1 Project',
+      icon: './assets/web-design.png',
+      count: `${getProjectCount('react')} Project`,
       technologies: ['React', 'HTML5', 'CSS3', 'JavaScript']
     },
     {
       id: 3,
       title: 'Mobile Apps',
       description: 'Cross-platform mobile applications focused on safety and empowerment, including SafeHer - a comprehensive safety app for women.',
-      icon: '/Nombali-Mafa-Portfolio/assets/benefits-of-mobile-app-for-business.webp',
-      count: '1 Project',
+      icon: './assets/benefits-of-mobile-app-for-business.webp',
+      count: `${getProjectCount('mobile')} Project`,
       technologies: ['React Native', 'Firebase', 'JavaScript']
     },
     {
       id: 4,
       title: 'Machine Learning',
       description: 'Data science and machine learning projects using Python, TensorFlow, and scikit-learn. Exploring predictive models and data analysis.',
-      icon: '/Nombali-Mafa-Portfolio/assets/ML.jpg',
-      count: '1 Project',
+      icon: './assets/ML.jpg',
+      count: `${getProjectCount('ml')} Project`,
       technologies: ['Python', 'TensorFlow', 'Scikit-learn', 'Pandas', 'Matplotlib']
     }
   ]

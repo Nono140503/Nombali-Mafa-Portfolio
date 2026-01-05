@@ -6,7 +6,7 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false)
   const location = useLocation()
   // build resume path using Vite base so it works when app is hosted on a subpath
-  const resumePath = `${import.meta.env.BASE_URL}Nombali_mafa_Resume.pdf`
+  const resumePath = `${import.meta.env.BASE_URL}Nombali_Mafa_CV.pdf`
 
   useEffect(() => {
     const handleScroll = () => {
@@ -48,7 +48,7 @@ const Navbar = () => {
             </a>
             <a
               href={resumePath}
-              download="Nombali_mafa_Resume.pdf"
+              download="Nombali_Mafa_CV.pdf"
               className="btn btn-primary nav-btn"
             >
               Download CV

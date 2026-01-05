@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { projects } from '../utils/projectData'
 import './Projects.css'
 
 const Projects = () => {
@@ -14,7 +15,8 @@ const Projects = () => {
         description: 'Credibot is your personal finance WhatsApp chatbot. He\'s your go-to guy for navigating loans and understanding financial policies.',
         image: '/Nombali-Mafa-Portfolio/assets/whatsapp-chatbot.webp',
         video: '/Nombali-Mafa-Portfolio/assets/CrediBot.mp4',
-        technologies: ['Node.js', 'WhatsApp Web JS', 'OpenAI API']
+        technologies: ['Node.js', 'WhatsApp Web JS', 'OpenAI API'],
+        category: 'WhatsApp Chatbots',
       },
       {
         id: 2,
@@ -22,7 +24,8 @@ const Projects = () => {
         description: 'Meet AllyBot, your WhatsApp chatbot ally in the IT workspace. She\'s here to empower women in tech.',
         image: '/Nombali-Mafa-Portfolio/assets/shutterstock_1180950625.jpg',
         video: '/Nombali-Mafa-Portfolio/assets/AllyBot.mp4',
-        technologies: ['Node.js', 'WhatsApp Web JS', 'OpenAI API']
+        technologies: ['Node.js', 'WhatsApp Web JS', 'OpenAI API'],
+        category: 'WhatsApp Chatbots',
       },
       {
         id: 3,
@@ -30,7 +33,8 @@ const Projects = () => {
         description: 'Meet ReproBot, your WhatsApp ally for Sexual Reproductive Health and Rights education.',
         image: '/Nombali-Mafa-Portfolio/assets/chatbot-app.jpg',
         video: '/Nombali-Mafa-Portfolio/assets/ReproBot.mp4',
-        technologies: ['Node.js', 'WhatsApp Web JS', 'OpenAI API']
+        technologies: ['Node.js', 'WhatsApp Web JS', 'OpenAI API'],
+        category: 'WhatsApp Chatbots',
       }
     ],
     react: [
@@ -40,7 +44,8 @@ const Projects = () => {
         description: 'React-based application providing real-time weather information with a clean interface.',
         image: '/Nombali-Mafa-Portfolio/assets/Colorful_3d_Weather_Forecast.png',
         link: 'https://nono140503.github.io/WeatherApp/',
-        technologies: ['React', 'JavaScript', 'OpenWeather API', 'CSS3']
+        technologies: ['React', 'JavaScript', 'OpenWeather API', 'CSS3'],
+        category: 'Website'
       }
     ],
     mobile: [
@@ -49,8 +54,9 @@ const Projects = () => {
         title: 'SafeHer',
         description: 'Cutting-edge mobile application designed to enhance women\'s safety through advanced technology.',
         image: '/Nombali-Mafa-Portfolio/assets/SafeHer-Logo.jpg',
-        video: '/Nombali-Mafa-Portfolio/assets/SafeHer.mp4',
-        technologies: ['React Native', 'Firebase', 'Geolocation']
+        video: '/Nombali-Mafa-Portlio/assets/SafeHer.mp4',
+        technologies: ['React Native', 'Firebase', 'Geolocation'],
+        category: 'Mobile App'
       }
     ],
      ml: [
@@ -60,11 +66,21 @@ const Projects = () => {
         description: 'Built a Random Forest model that predicts maternal health risk levels with 81% accuracy using clinical data.',
         image: '/Nombali-Mafa-Portfolio/assets/Maternity.png',
         link: 'https://colab.research.google.com/drive/1J6eP8YmSDnQNefUJ-s0rb3i34ARnMBgU?usp=sharing',
-        technologies: ['Python', 'Pandas', 'Seaborn', 'Matplotlib', 'Scikit-learn']
-      }
+        technologies: ['Python', 'Pandas', 'Seaborn', 'Matplotlib', 'Scikit-learn'],
+        category: 'Machine Learning'
+      },
+      {
+      id: 7,
+      title: 'Life Expectancy and Health Spending',
+      description: "This project analyzed life expectancy in relation to GDP and healthcare spending, identifying countries that achieve better outcomes with efficient health expenditure.",
+      image: '/Nombali-Mafa-Portfolio/assets/life-expectancy-world-map-hi.png',
+      link: 'https://colab.research.google.com/drive/1aRQzg4RcptSW_kL4_HDv3MNP7Q5_TQl_?usp=sharing',
+      technologies: ['Python', 'Pandas', 'Seaborn', 'Matplotlib', 'Scikit-learn'],
+      category: 'Machine Learning'
+    }
     ],
   }
-
+  
   const filters = [
     { id: 'all', name: 'All Projects', icon: 'fas fa-rocket' },
     { id: 'chatbots', name: 'Chatbots', icon: 'fas fa-robot' },
@@ -97,7 +113,7 @@ const Projects = () => {
   return (
     <div className="projects-page">
       <div className="projects-hero">
-        <div className="container">
+        <div className="container" style={{ position: 'relative', zIndex: 2 }}>
           <h1 className="projects-title">My Projects</h1>
           <p className="projects-subtitle">
             Explore my journey through different technologies and domains
